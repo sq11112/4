@@ -142,6 +142,52 @@ document.querySelectorAll('input[name="name"]').forEach(input => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const WORKER_URL = 'https://telegramform2.shmyrov-900.workers.dev';
+
+  document.querySelectorAll('form[data-telegram]').forEach(form => {
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const website = form.querySelector('[name="website"]')?.value;
+      if (website) return;
+
+      const name = form.querySelector('[name="name"]')?.value.trim();
+      const phone = form.querySelector('[name="phone"]')?.value.trim();
+
+      if (!name || !phone) {
+        alert('Заполните имя и телефон');
+        return;
+      }
+
+      try {
+        const res = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone })
+        });
+
+        if (!res.ok) throw new Error('Ошибка сервера');
+
+        const data = await res.json();
+
+        if (data.success) {
+          alert('Заявка отправлена!');
+          form.reset();
+        } else {
+          alert('Ошибка отправки');
+        }
+
+      } catch (err) {
+        alert('Ошибка соединения');
+        console.error(err);
+      }
+    });
+
+  });
+});
+
 const tabs = 'data-toggle="tabs"',
 	tabsLink = 'data-tabs="link"',
 	tabsContent = 'data-tabs="content"';
