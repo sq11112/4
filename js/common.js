@@ -33,6 +33,65 @@ function mobileNavClose()
 	$('#mobileNav').hide();
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const nameInputs = document.querySelectorAll('input[name="name"]');
+
+  nameInputs.forEach(input => {
+
+    input.addEventListener('input', () => {
+      input.value = input.value
+        .replace(/[^a-zA-Zа-яА-ЯёЁ\s-]/g, '')
+        .slice(0, 26);
+    });
+
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const inputs = document.querySelectorAll('[data-phone-mask]');
+
+  inputs.forEach(input => {
+
+    input.addEventListener('focus', () => {
+      if (!input.value) {
+        input.value = '+375';
+      }
+    });
+
+    input.addEventListener('input', () => {
+      let digits = input.value.replace(/\D/g, '');
+
+      if (!digits.startsWith('375')) {
+        digits = '375';
+      }
+
+      digits = digits.slice(0, 12);
+
+      let result = '+375';
+
+      if (digits.length > 3) result += '(' + digits.slice(3, 5);
+      if (digits.length >= 5) result += ')';
+      if (digits.length > 5) result += digits.slice(5, 8);
+      if (digits.length > 8) result += ' ' + digits.slice(8, 10);
+      if (digits.length > 10) result += ' ' + digits.slice(10, 12);
+
+      input.value = result;
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && input.value.length <= 4) {
+        e.preventDefault();
+      }
+    });
+
+    input.addEventListener('blur', () => {
+      if (input.value === '+375') {
+        input.value = '';
+      }
+    });
+
+  });
+});
 
 
 $(document).on('click', '[data-nav-anchor]', function (event) {
