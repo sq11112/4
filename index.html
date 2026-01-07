@@ -2,26 +2,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>	
+<head>
+	
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
 	<title>Работа курьером в сервисе Яндекс Доставка</title>
-	<meta name="keywords" content="Работа водителем-курьером на личном автомобиле, либо на автомобиле компании с официальным оформлением и самыми выгодными условиями работы в городе Минске" />
+	<link rel="icon" type="image/png" href="images/124.png">
+	<meta name="keywords" content="" />
 	<meta name="description" content="Работа водителем-курьером на личном автомобиле, либо на автомобиле компании с официальным оформлением и самыми выгодными условиями работы в городе Минске" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
+	<link href="css/font.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />	
 	<meta property="og:type" content="website"/>
 	<meta property="og:title" content="Работа курьером в Яндекс Доставке"/>
 	<meta property="og:description" content="Работа водителем-курьером на личном автомобиле, либо на автомобиле компании с официальным оформлением и самыми выгодными условиями работы в городе Минске"/>
 	<meta property="og:image:width" content="1200"/>
 	<meta property="og:image:height" content="630"/>
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-	<link rel="icon" type="image/png" href="images/124.png">	
-	<link href="css/font.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />	
 	<meta name="theme-color" content="#FFC462" />
 </head>
 <body class="pageview-home">
@@ -62,7 +57,7 @@
 				<div class="text">На собственном автомобиле <br />
 					 или автомобиле компании</div>
 				<div class="action">
-					<a href="#formoffer" class="btn btn-xl" data-toggle="modal" data-feedback="Оффер: Узнать условия">Оставить заявку</a>
+					<a href="#formoffer" class="btn btn-xl" data-toggle="modal">Оставить заявку</a>
 				</div>
 			</div>
 			<picture class="home-offer-image">
@@ -157,7 +152,7 @@
 												</ul>
 						<div class="bottom">
 							<div class="action">
-								<a href="#formoffer" class="btn btn-xl" data-toggle="modal" data-feedback="Оффер: Узнать условия">Оставить заявку</a>
+								<a href="#formoffer" class="btn btn-xl" data-toggle="modal">Оставить заявку</a>
 							</div>
 						</div>
 					</div>
@@ -183,7 +178,7 @@
 												</ul>
 						<div class="bottom">
 							<div class="action">
-								<a href="#formoffer" class="btn btn-xl" data-toggle="modal" data-feedback="Оффер: Узнать условия">Оставить заявку</a>
+								<a href="#formoffer" class="btn btn-xl" data-toggle="modal" >Оставить заявку</a>
 							</div>
 						</div>
 					</div>
@@ -255,7 +250,7 @@
 											<li>
 							<div class="title">Адрес:</div>
 							<div class="email">
-								Беларусь, г. Минск, ул. Сухаревская 16-16.							</div>
+								Беларусь, г. Минск, ул. Сухаревская 16 пом.16.							</div>
 						</li>																
 									</ul>
 			</div>
@@ -268,10 +263,10 @@
 						<div class="text">Оставьте ваши данные</div>
 					</div>
 					<div class="input">
-						<input type="text" name="name" class="form-input" placeholder="Ваше имя:" required pattern="[A-Za-zА-Яа-яЁё\s]+" title="Введите только имя (без цифр)">
+						<input type="text" name="name" class="form-input" minlength="2"  maxlength="26" placeholder="Ваше имя:" required pattern="[A-Za-zА-Яа-яЁё\s]+" title="Введите Ваше имя ">
 					</div><br>
 					<div class="input">
-						<input type="tel" name="phone" class="form-input" placeholder="Ваш номер телефона:" required inputmode="tel" pattern="[\d\+\-\(\)\s]{7,}" title="Введите корректный номер телефона">
+						<input type="tel" name="phone" id="phone1" class="form-input" data-phone-mask placeholder="+375 (__) ___ __ __" required inputmode="tel" pattern="[\d\+\-\(\)\s]{7,}" title="Введите корректный номер телефона">
 					</div>
 					<div class="action">
 						<button class="btn btn-xl">Отправить</button>
@@ -313,10 +308,10 @@
 						<div class="text">Оставьте ваши данные, мы свяжемся с Вами в рабочее время</div>
 					</div>
 					<div class="input">
-						<input type="text" name="name" class="form-input" placeholder="Ваше имя:" required pattern="[A-Za-zА-Яа-яЁё\s]+" title="Введите только имя (без цифр)">
+						<input type="text" name="name" class="form-input" minlength="2" maxlength="26" placeholder="Ваше имя:" required pattern="[A-Za-zА-Яа-яЁё\s]+" title="Введите Ваше имя ">
 					</div><br>
 					<div class="input">
-						<input type="tel" name="phone" class="form-input" placeholder="Ваш номер телефона:" required inputmode="tel" pattern="[\d\+\-\(\)\s]{7,}" title="Введите корректный номер телефона">
+						<input type="tel" name="phone" id="phone1" class="form-input" data-phone-mask placeholder="+375 (__) ___ __ __" required inputmode="tel" pattern="[\d\+\-\(\)\s]{7,}" title="Введите корректный номер телефона">
 					</div>
 					<div class="action">
 						<button class="btn btn-xl">Отправить</button>
@@ -339,12 +334,11 @@
 				<a href="OV-BelGroop@yandex.by">OV-BelGroop@yandex.by</a>
 			</div>
 			<div class="address">
-				Беларусь, г. Минск, ул. Сухаревская 16-16			</div>
+				Беларусь, г. Минск, ул. Сухаревская 16 пом.16			</div>
 		</div>
 	</div>
 </div>
 <script  src="js/jquery-3.5.0.min.js"></script>
 <script  src="js/common.js"></script>
 </body>
-
 </html>
