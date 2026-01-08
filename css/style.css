@@ -2057,6 +2057,9 @@ body.mobile-open .header-mobile-nav span {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     flex-wrap: nowrap;
     column-gap: 20px;
     background: #fff;
@@ -2064,7 +2067,8 @@ body.mobile-open .header-mobile-nav span {
     border-radius: 15px;
     transition: transform 0.3s ease;
     max-width: 100%;
-    overflow: hidden;  
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .home-features-item .icon {
@@ -2080,7 +2084,10 @@ body.mobile-open .header-mobile-nav span {
 
 .home-features-item .description {
     flex-grow: 1;
-    padding-top: 5px
+    padding-top: 5px;
+    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 .home-features-item .title {
