@@ -3250,7 +3250,22 @@ body.mobile-open .header-mobile-nav span {
     }
 }
 
+@media (max-width: 768px) {
+  .home-features-item {
+    flex-direction: column; /* Элементы располагаться вертикально */
+    align-items: center;    /* Выравнивание по центру */
+    text-align: center;      /* Текст тоже по центру */
+  }
+
+  .home-features-item img {
+    margin-bottom: 15px; /* Отступ снизу для картинки */
+    width: 100%; /* Картинка займет всю ширину контейнера */
+    max-width: 200px; /* Максимальная ширина картинки */
+  }
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
