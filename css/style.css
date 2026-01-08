@@ -55,18 +55,6 @@ body.overflow {
     border-right: 12px solid #eaeaea
 }
 
-@media (max-width: 768px) {
-  .home-offer-image:hover {
-    transform: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-logo:hover {
-    transform: none;
-  }
-}
-
 input,
 textarea,
 button,
@@ -908,9 +896,7 @@ input[readonly] {
     -moz-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
     -ms-transition: all .5s ease 0s;
-    transition: all .5s ease 0s;
-    max-width: 100%;
-    white-space: normal;
+    transition: all .5s ease 0s
 }
 
 .btn:hover {
@@ -1345,23 +1331,7 @@ input[readonly] {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-.home-offer,
-.home-offer-container,
-.home-offer-content {
-  max-width: 100%;
-  overflow-x: hidden;
+    margin-right: auto
 }
 
 .header {
@@ -2044,9 +2014,7 @@ body.mobile-open .header-mobile-nav span {
 .home-features-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 100%;
-    overflow-x: hidden;
+    gap: 20px
 }
 
 .home-features-item:hover {
@@ -2057,18 +2025,12 @@ body.mobile-open .header-mobile-nav span {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     flex-wrap: nowrap;
     column-gap: 20px;
     background: #fff;
     padding: 20px 25px;
     border-radius: 15px;
-    transition: transform 0.3s ease;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;
+    transition: transform 0.3s ease;  
 }
 
 .home-features-item .icon {
@@ -2084,10 +2046,7 @@ body.mobile-open .header-mobile-nav span {
 
 .home-features-item .description {
     flex-grow: 1;
-    padding-top: 5px;
-    width: 100%;
-    max-width: 100%;
-    display: block;
+    padding-top: 5px
 }
 
 .home-features-item .title {
@@ -2405,9 +2364,7 @@ body.mobile-open .header-mobile-nav span {
     }
 
     .home-features-list {
-        display: block;
-        width: 100%;
-        overflow-x: hidden;
+        display: block
     }
 
     .home-features-item {
@@ -2571,9 +2528,6 @@ body.mobile-open .header-mobile-nav span {
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     padding-bottom: 15px;
     transition: transform 0.3s ease;
-    max-width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
 }
 
 .courier-requirements-item .image img {
@@ -2682,8 +2636,7 @@ body.mobile-open .header-mobile-nav span {
     top: -40px;
     right: 20px;
     flex-shrink: 0;
-    width: 250px;
-    overflow: hidden;
+    width: 250px
 }
 
 .courier-box-image img {
@@ -3297,21 +3250,4 @@ body.mobile-open .header-mobile-nav span {
     }
 }
 
-.home-features-list {
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-}
-
-.home-features-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.home-features-item {
-  min-width: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+/*# sourceMappingURL=style.css.map */
