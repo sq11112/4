@@ -3250,4 +3250,7 @@ body.mobile-open .header-mobile-nav span {
     }
 }
 
-/*# sourceMappingURL=style.css.map */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
